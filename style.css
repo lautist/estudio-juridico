@@ -291,12 +291,12 @@ form{
     margin: 10px auto;
     cursor: pointer;
     color: #ffa600;
-    transition:background color border ;
+    transition:background, color, border ;
     transition-duration: 2s;
     
 }
 .cerrar:hover{
-    background: red;
+    background: rgba(255, 0, 0, 0.795);
     color: rgb(255, 166, 0);
     border: 1px solid rgb(255, 166, 0);
 }
@@ -347,7 +347,13 @@ form{
         border-radius: 5px;
         border: 1px solid black;
         margin: 2px auto;
+        transition:  height, width;
+        transition-duration: 1s;
 
+    }
+    .consulta:hover{
+        height: 25px;
+        width: 50%;
     }
     .btn-envio{
         width: 10%;
