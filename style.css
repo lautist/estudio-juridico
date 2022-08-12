@@ -76,7 +76,7 @@ body{
             }
         .img-modify{
             height: 270px;
-            width: 403px;
+            width: 100%;
             border-radius: 10px 10px 0 0;
         }
       
