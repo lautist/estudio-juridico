@@ -31,6 +31,12 @@ body{
         color: rgb(177, 115, 1);
         text-align: center;
         font-size: 23px;
+        cursor: pointer;
+        transition: color;
+        transition-duration: 0.5s;
+    }
+    .nav-contacto:hover{
+        color: rgb(255, 166, 0);
     }
 
 .card {
