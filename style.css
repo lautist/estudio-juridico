@@ -86,6 +86,8 @@ body{
             border-radius: 10px 10px 0 0;
         }
       
+
+       
 .info{
     background: black;
     margin: 0px 100px;
@@ -403,3 +405,124 @@ footer a{
 footer a:hover{
     color: rgb(255, 174, 0);
 }
+
+
+
+ /* RESOLUCION CARD MEDIA 1080 */
+
+ @media screen and (max-width: 1080px){
+    /* .card{} */
+    .cards{
+        margin: 10px 50px;
+        height: 400px;
+    }
+    .a1{
+        margin-left: 160px;
+    }
+    .a2{
+        margin-left: 50px;
+    }
+    .a3{
+        margin: 5px auto;
+    }
+
+}
+
+/* FINALIZA RESPONSIVE 1080PX */
+
+/* RESOLUCION CARD MEDIA 899px */
+    @media  screen and (max-width: 899px){
+        .ubicacion{
+            margin-top: 10px;
+        }
+        .a1{
+            margin-left: 135px;
+        }
+    }
+/* FINALIZA RESPONSIVE 899PX */    
+
+/* RESOLUCION CARD MEDIA 774px */
+    @media  screen and (max-width: 774px){
+        .cards{
+            width: 40%;
+        }
+        .a1{
+            margin-left: 230px;
+        }
+        .a2{
+            margin: auto;
+        }
+        .a3{
+            margin: auto;
+        }
+    }
+
+/* FINALIZA RESPONSIVE 774px */     
+
+/* RESOLUCION CARD MEDIA 679px */
+@media screen and (max-width:679px){
+    .card{
+        flex-direction: column;
+        margin: 10px auto;
+    }
+    .cards{
+        margin: 10px auto;
+        width: 60%;
+    }
+}
+/* FINALIZA RESPONSIVE 679px */ 
+
+/* RESOLUCION CARD MEDIA 530px */
+    @media screen and (max-width:530px){
+        .logo{
+            height: 80px;
+        }
+    }
+/* FINALIZA RESPONSIVE 530px */     
+
+/* RESOLUCION CARD MEDIA 368px */
+    @media screen and (max-width:600px){
+        .wsp{
+            height: 300px;
+        }
+        footer{
+            height: 50px;
+        }
+        .cards{
+            width: 85%;
+        }
+        .info{
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        .location{
+            margin: 2px 10px;
+        }
+    }
+/* FINALIZA RESPONSIVE 368px */ 
+
+/* RESOLUCION CARD MEDIA 310px */
+@media screen and (max-width: 310px){
+    .wsp{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        /* height: 450px; */
+        height: auto;
+    }
+
+    .footer-center{
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* FINALIZA RESPONSIVE 368px */ 
+
+/* RESOLUCION CARD MEDIA 280px */
+    @media screen and (max-width: 280px){
+        .logo{
+            height: auto;
+        }
+    }
+/* FINALIZA RESPONSIVE 280px */ 
