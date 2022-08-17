@@ -4,7 +4,7 @@
     /* background: black; */
 }
 body{
-    background-color: rgba(41, 41, 41, 0.897);
+    background-color: #292929e5;
 }
 
 /* MAQUETACION */
@@ -24,19 +24,27 @@ body{
     height: 35px;
     background: black;
     width: 100%;
-    border-bottom: #8f5454 solid 1px;
-    border-top: 1px solid #8f5454;
+    border-bottom: #919191 solid 1px;
+    border-top: 1px solid #919191;
+    text-align: center;
 }
     .nav-contacto{
+        background: #292929e5;
         color: rgb(177, 115, 1);
         text-align: center;
         font-size: 23px;
         cursor: pointer;
-        transition: color;
+        transition: color, background, border-radius, border;
         transition-duration: 0.5s;
+        width: 15%;
+        margin: 2.5px auto;
+        text-align: center;
     }
     .nav-contacto:hover{
-        color: rgb(255, 166, 0);
+        color: #ffa600;
+        background: #4b2d2d;
+        border-radius: 10px;
+        border: 0.1px #ffa600a4 solid;
     }
 
 .card {
@@ -469,6 +477,9 @@ footer a:hover{
         margin: 10px auto;
         width: 60%;
     }
+    .nav-contacto{
+        width: 60%;
+    }
 }
 /* FINALIZA RESPONSIVE 679px */ 
 
@@ -536,6 +547,9 @@ footer a:hover{
     @media screen and (max-width: 280px){
         .logo{
             height: auto;
+        }
+        .nav-contacto{
+            width: 90%;
         }
     }
 /* FINALIZA RESPONSIVE 280px */ 
