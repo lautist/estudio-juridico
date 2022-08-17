@@ -80,15 +80,15 @@
         </div>
     </div>
 
-    <form action="https://formsubmit.co/lautist@yopmail.com" method="POST" value="true">
+    <form action="contacto.php" method="POST" value="true">
                 
         <div class="contact-style">
          <p class="cerrar" onclick="cerrar()">Cerrar</p>
         <label for="nombre" class="form-text">Nombre</label>
-        <input type="text" name="nombre" placeholder="Nombre" class="form-data">
+        <input type="text" name="name" placeholder="Nombre" class="form-data">
 
         <label for="apellido" class="form-text">Apellido</label>
-        <input type="text" name="apellido" placeholder="Apellido" class="form-data">
+        <input type="text" name="surname" placeholder="Apellido" class="form-data">
 
         <label for="email" class="form-text">Email</label>
         <input type="email" name="email" placeholder="Email" class="form-data">
@@ -99,7 +99,7 @@
         <label for="consulta" class="form-text">Consulta</label>
         <input type="text" name="consulta" placeholder="Su Consulta..." class="consulta form-data" >
 
-        <input type="submit" value="Enviar" onClick="pruebaemail(email.value);" class="btn-envio">
+        <input type="submit" name="enviar" value="Enviar" onClick="pruebaemail(email.value);" class="btn-envio">
         
      </div>
 
@@ -112,6 +112,10 @@
         <a href=""><p>Programado por lautist</p></a>
     </div>
     </footer>
+
+    <?php 
+    include("contacto.php");
+     ?>
     <script src="app.js"></script>
     <script src="https://kit.fontawesome.com/263969b409.js" crossorigin="anonymous"></script>
 </body>
