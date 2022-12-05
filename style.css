@@ -444,65 +444,9 @@ footer a:hover{
 }
 
 
- /* @media screen and (max-width: 1080px){
-   
-    .cards{
-        margin: 10px 50px;
-        height: 400px;
-    }
-    .a1{
-        margin-left: 160px;
-    }
-    .a2{
-        margin-left: 50px;
-    }
-    .a3{
-        margin: 5px auto;
-    }
-
-} */
-
-/* FINALIZA RESPONSIVE 1080PX */
-
-/* RESOLUCION CARD MEDIA 899px */
-    /* @media  screen and (max-width: 899px){
-        .ubicacion{
-            margin-top: 10px;
-        }
-        .a1{
-            margin-left: 135px;
-        }
-    } */
-/* FINALIZA RESPONSIVE 899PX */    
-
-/* RESOLUCION CARD MEDIA 774px */
-    /* @media  screen and (max-width: 774px){
-        .cards{
-            width: 40%;
-        }
-        .a1{
-            margin-left: 230px;
-        }
-        .a2{
-            margin: auto;
-        }
-        .a3{
-            margin: auto;
-        }
-    } */
-
-/* FINALIZA RESPONSIVE 774px */     
-
 /* RESOLUCION CARD MEDIA 679px */
 @media screen and (max-width:679px){
-    /* .card{
-        flex-direction: column;
-        margin: 10px auto;
-    }
-    .cards{
-        margin: 10px auto;
-        width: 60%;
-    } */
+    
     .nav-contacto{
         width: 60%;
     }
@@ -512,6 +456,11 @@ footer a:hover{
     }
 }
 /* FINALIZA RESPONSIVE 679px */ 
+@media  screen and (max-width:600px){
+    .contact-divb{
+        margin: 0px;
+    }
+}
 
 /* RESOLUCION CARD MEDIA 530px */
     @media screen and (max-width:530px){
