@@ -424,12 +424,13 @@ footer a:hover{
         flex-direction: column;
         align-items: center;
         width: 100%;
+        /* height: auto; */
     }
 
     .cards{
         margin: 10px 0px;
-        width: 95%;
-        /* height: auto; */
+        width: 80%;
+        height: auto;
     }
 
  }
@@ -454,11 +455,22 @@ footer a:hover{
     .ubicacion{
         margin-top: 25px;
     }
+    .cards{
+        margin: 10px 0px;
+        width: 85%;
+        height: auto;
+    }
 }
 /* FINALIZA RESPONSIVE 679px */ 
 @media  screen and (max-width:600px){
     .contact-divb{
         margin: 0px;
+    }
+
+    .cards{
+        margin: 10px 0px;
+        width: 90%;
+        height: auto;
     }
 }
 
