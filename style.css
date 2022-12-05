@@ -208,12 +208,12 @@ body{
                 width: 100%;
                 border-radius: 10px 10px 0px 0px;
                 transition-property: box-shadow height;
-                transition-duration: 1.5s;
+                transition-duration: 0.8s;
             }
             .img-google-map:hover{
-             box-shadow: 0px 0px 5px 2px  rgb(177, 115, 1);
-             height: 250px;   
-             border-radius: 10px 10px 10px 10px;
+             box-shadow: 0px 0px 5px 1px  rgb(177, 115, 1);
+             /* height: 250px;    */
+             border-radius: 10px;
             }
             .dire-location{
             margin-top: 10px;
@@ -418,8 +418,23 @@ footer a:hover{
 
  /* RESOLUCION CARD MEDIA 1080 */
 
- @media screen and (max-width: 1080px){
-    /* .card{} */
+ @media screen and (max-width: 1200px){
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cards{
+        width: 100%;
+        height: auto;
+    }
+
+ }
+
+ /* @media screen and (max-width: 1080px){
+   
     .cards{
         margin: 10px 50px;
         height: 400px;
@@ -434,23 +449,23 @@ footer a:hover{
         margin: 5px auto;
     }
 
-}
+} */
 
 /* FINALIZA RESPONSIVE 1080PX */
 
 /* RESOLUCION CARD MEDIA 899px */
-    @media  screen and (max-width: 899px){
+    /* @media  screen and (max-width: 899px){
         .ubicacion{
             margin-top: 10px;
         }
         .a1{
             margin-left: 135px;
         }
-    }
+    } */
 /* FINALIZA RESPONSIVE 899PX */    
 
 /* RESOLUCION CARD MEDIA 774px */
-    @media  screen and (max-width: 774px){
+    /* @media  screen and (max-width: 774px){
         .cards{
             width: 40%;
         }
@@ -463,20 +478,20 @@ footer a:hover{
         .a3{
             margin: auto;
         }
-    }
+    } */
 
 /* FINALIZA RESPONSIVE 774px */     
 
 /* RESOLUCION CARD MEDIA 679px */
 @media screen and (max-width:679px){
-    .card{
+    /* .card{
         flex-direction: column;
         margin: 10px auto;
     }
     .cards{
         margin: 10px auto;
         width: 60%;
-    }
+    } */
     .nav-contacto{
         width: 60%;
     }
@@ -511,9 +526,9 @@ footer a:hover{
         footer{
             height: 50px;
         }
-        .cards{
+        /* .cards{
             width: 85%;
-        }
+        } */
         .info{
             width: 80%;
             margin: 10px auto;
