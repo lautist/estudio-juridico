@@ -427,11 +427,22 @@ footer a:hover{
     }
 
     .cards{
-        width: 100%;
+        margin: 10px 0px;
+        width: 80%;
         height: auto;
     }
 
  }
+
+ @media screen and (max-width: 899px){
+ 
+    .ubicacion{
+        
+            margin-top: 25px;
+        
+    }
+}
+
 
  /* @media screen and (max-width: 1080px){
    
@@ -494,6 +505,10 @@ footer a:hover{
     } */
     .nav-contacto{
         width: 60%;
+    }
+
+    .ubicacion{
+        margin-top: 25px;
     }
 }
 /* FINALIZA RESPONSIVE 679px */ 
