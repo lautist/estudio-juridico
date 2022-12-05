@@ -428,8 +428,8 @@ footer a:hover{
 
     .cards{
         margin: 10px 0px;
-        width: 80%;
-        height: auto;
+        width: 95%;
+        /* height: auto; */
     }
 
  }
