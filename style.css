@@ -61,12 +61,12 @@ body{
         margin: 10px 20px;
         border-radius: 10px;
         color: rgb(177, 115, 1);
-        box-shadow: 5px 0px 10px 0px  rgb(177, 115, 1);
+        box-shadow: 0px 0px 3px 0px  rgb(177, 115, 1);
         transition-property: box-shadow;
         transition-duration: 1s;
     }
         .cards:hover{
-            box-shadow: 0px 0px 10px 5px  #8f5454;
+            box-shadow: 0px 0px 5px 3px  #8f5454;
         }
         .card-content{
             /* background: red; */
@@ -102,7 +102,7 @@ body{
     margin-top: 20px;
     padding: 20px 5px;
     border-radius: 10px;
-    box-shadow: 1px 1px 5px 0px  rgb(177, 115, 1);
+    box-shadow: 0px 1px 4px 0px  rgb(177, 115, 1);
     transition-property: box-shadow;
     transition-duration: 2s;
 } 
@@ -130,20 +130,25 @@ body{
 }
     .card-location{
         border-radius:  10px;
-        height: 250px;
+        height: 300px;
         margin: 0 auto;
-        width: 450px;
+        width: 600px;
         background: black;
         color: rgb(177, 115, 1);
         
     }
     .card-location a{text-decoration: none;}
     .contact-diva{
-        margin: 50px 30px 0px 30px;
+        margin: auto;
     }
     .contact-divb{
-        margin: 40px 20px 0px 20px;
+        margin: auto;
     }
+    .horarios{
+        font-size: 19px;
+        line-height: auto;
+    }
+
 
         .wsp{
             text-align: center;
@@ -189,9 +194,7 @@ body{
                     .contacto-wsp:hover{
                         color: #ffa600;
                         border: 1px solid #b17301;
-                        background:  #4b2d2d;
                         border-radius: 10px;
-                        box-shadow: 0px 0px 5px 1px #b17301;
                     }   
 
 
@@ -204,7 +207,7 @@ body{
             }
             .img-google-map{
                 margin-top: 0px;
-                height: 200px;
+                height: 250px;
                 width: 100%;
                 border-radius: 10px 10px 0px 0px;
                 transition-property: box-shadow height;
@@ -213,10 +216,11 @@ body{
             .img-google-map:hover{
              box-shadow: 0px 0px 5px 1px  rgb(177, 115, 1);
              /* height: 250px;    */
-             border-radius: 10px;
+             /* border-radius: 10px; */
             }
             .dire-location{
-            margin-top: 10px;
+            /* margin-top: 5px; */
+            margin: auto;
             font-size: 25px;
             }
 
@@ -393,9 +397,10 @@ footer{
     flex-direction: column;
     height: 25px;
     width: 100%;
-    background: black;
+    background: rgba(0, 0, 0, 0.877);
     color: white;
     text-align: center;
+    border-top: #b17301 1px;
 }
 .footer-center{
     display: flex;
@@ -423,7 +428,9 @@ footer a:hover{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        justify-content: center;
+        margin: auto;
+        width: 80%;
         /* height: auto; */
     }
 
@@ -432,6 +439,11 @@ footer a:hover{
         width: 80%;
         height: auto;
     }
+    .ubicacion{
+        
+        margin-top: 25px;
+    
+}
 
  }
 
@@ -541,6 +553,9 @@ footer a:hover{
         }
         .nav-contacto{
             width: 90%;
+        }
+        .dire-location{
+            font-size: 18px;
         }
     }
 /* FINALIZA RESPONSIVE 280px */ 
