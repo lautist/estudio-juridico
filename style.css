@@ -4,7 +4,7 @@
     /* background: black; */
 }
 body{
-    background-color: #292929e5;
+    background-color: #636060;
 }
 
 /* MAQUETACION */
@@ -206,15 +206,15 @@ body{
                 font-size: 20px;
             }
             .img-google-map{
-                margin-top: 0px;
-                height: 250px;
-                width: 100%;
-                border-radius: 10px 10px 0px 0px;
+                margin-top: 18px;
+                height: 230px;
+                width: 90%;
+                border-radius: 10px;
                 transition-property: box-shadow height;
                 transition-duration: 0.8s;
             }
             .img-google-map:hover{
-             box-shadow: 0px 0px 5px 1px  rgb(177, 115, 1);
+             box-shadow: 0px 0px 5px 2px  rgb(177, 115, 1);
              /* height: 250px;    */
              /* border-radius: 10px; */
             }
