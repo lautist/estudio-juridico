@@ -1,10 +1,9 @@
 *{
     margin: 0;
     font-family: 'Quicksand', sans-serif;
-    /* background: black; */
 }
 body{
-    background-color: #636060;
+    background: rgb(73, 70, 58);
 }
 
 /* MAQUETACION */
@@ -13,11 +12,11 @@ body{
     height: 50px;
     background: black;
     width: 100%;
-    color: rgb(177, 115, 1);
+    color: #ffa600;
 }
     .logo h1{
         text-align: center;
-        color: rgb(177, 115, 1);
+        color: #ffa600;
     }
 
 .nav-slash{
@@ -27,10 +26,11 @@ body{
     border-bottom: #919191 solid 1px;
     border-top: 1px solid #919191;
     text-align: center;
+    padding: 15px 5px 10px 5px ;
 }
     .nav-contacto{
         background: #292929e5;
-        color: rgb(177, 115, 1);
+        color: #ffa600;
         text-align: center;
         font-size: 23px;
         cursor: pointer;
@@ -46,9 +46,28 @@ body{
         border-radius: 10px;
         border: 0.1px #ffa600a4 solid;
     }
+    .nav-slash a{
+        margin: 10px auto;
+    }
+
+    .email-contac{  
+        text-decoration: none;
+        color: #ffa600;
+        font-size: 25px;
+        padding: 5px 10px;
+        
+    }
+        .email-contac:hover{
+            border: 1px solid #ffa600;
+            background: #4b2d2d;
+            border-radius: 5px;
+            transition: border, background, border-radius, 1.2s;
+        }
+
+   
 
 .card {
-    color: rgb(177, 115, 1);
+    color: #ffa600;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
@@ -60,32 +79,30 @@ body{
         background: black;
         margin: 10px 20px;
         border-radius: 10px;
-        color: rgb(177, 115, 1);
+        color: #ffa600;
         box-shadow: 0px 0px 3px 0px  rgb(177, 115, 1);
         transition-property: box-shadow;
         transition-duration: 1s;
     }
         .cards:hover{
-            box-shadow: 0px 0px 5px 3px  #8f5454;
+            box-shadow: 0px 0px 5px 3px  ;
         }
         .card-content{
-            /* background: red; */
             border-radius: 15px 15px 0 0;
-            color: rgb(177, 115, 1);
+            color: #ffa600;
         }
             .card-content h2{
                 position: relative;
                 top: -150px;
                 background: rgba(0, 0, 0, 0.479);
-                /* height: 30px; */
                 padding: 10px 10px;
-                color: rgb(177, 115, 1);
+                color: #ffa600;
                 
             }
             .card-content p{
                 position: relative;
                 top: -40px;
-                color: rgb(177, 115, 1);
+                color: #ffa600;
 
             }
         .img-modify{
@@ -102,30 +119,31 @@ body{
     margin-top: 20px;
     padding: 20px 5px;
     border-radius: 10px;
-    box-shadow: 0px 1px 4px 0px  rgb(177, 115, 1);
+    box-shadow: 0px 0px 4px 1px  rgb(177, 115, 1);
     transition-property: box-shadow;
     transition-duration: 2s;
 } 
     .info:hover{
-        box-shadow: 3px 3px 5px 0px  #8f5454;
+        box-shadow: 0px 3px 5px 0px rgb(177, 115, 1);
     }       
     .info h2{
         text-align: center;
         margin-bottom: 10px;
-        color: rgb(177, 115, 1);
+        color: #ffa600;
     }
     .info p{
         text-align: center;
-        color: rgb(177, 115, 1);
+        color: #ffa600;
     }
-    
+
+  
 
 .location{
     display: flex;
     flex-wrap: wrap;
     margin-top: 35px;
     margin-bottom: 10px;
-    color: rgb(177, 115, 1); 
+    color: #ffa600;
     
 }
     .card-location{
@@ -134,7 +152,7 @@ body{
         margin: 0 auto;
         width: 600px;
         background: black;
-        color: rgb(177, 115, 1);
+        color: #ffa600;
         
     }
     .card-location a{text-decoration: none;}
@@ -152,7 +170,7 @@ body{
 
         .wsp{
             text-align: center;
-            color: #b17301;
+            color: #ffa600;
             display: flex;
         }
             .wsp .fa-whatsapp{
@@ -207,19 +225,16 @@ body{
             }
             .img-google-map{
                 margin-top: 18px;
-                height: 230px;
-                width: 90%;
+                height: 235px;
+                width: 85%;
                 border-radius: 10px;
                 transition-property: box-shadow height;
                 transition-duration: 0.8s;
             }
             .img-google-map:hover{
-             box-shadow: 0px 0px 5px 2px  rgb(177, 115, 1);
-             /* height: 250px;    */
-             /* border-radius: 10px; */
+             box-shadow: 0px 0px 5px 4px  rgb(177, 115, 1);
             }
             .dire-location{
-            /* margin-top: 5px; */
             margin: auto;
             font-size: 25px;
             }
@@ -400,7 +415,7 @@ footer{
     background: rgba(0, 0, 0, 0.877);
     color: white;
     text-align: center;
-    border-top: #b17301 1px;
+    border-top: #b17301 1px solid;
 }
 .footer-center{
     display: flex;
@@ -431,20 +446,16 @@ footer a:hover{
         justify-content: center;
         margin: auto;
         width: 80%;
-        /* height: auto; */
     }
-
     .cards{
         margin: 10px 0px;
         width: 80%;
         height: auto;
     }
-    .ubicacion{
-        
+    .ubicacion{ 
         margin-top: 25px;
     
 }
-
  }
 
  @media screen and (max-width: 899px){
