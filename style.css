@@ -1,245 +1,540 @@
-*{
+/* style.css */
+
+/* Variables CSS para colores */
+:root {
+    --primary-color: #fca311; /* Naranja/Amarillo brillante */
+    --secondary-color: #14213d; /* Azul oscuro casi negro */
+    --background-light: #fcf5cb; /* Crema suave */
+    --background-dark: #2c2f33; /* Gris oscuro para secciones */
+    --text-light: #fefae0; /* Texto claro para fondos oscuros */
+    --text-dark: #14213d; /* Texto oscuro para fondos claros */
+    --border-color: #4a4e69; /* Gris azulado para bordes */
+    --hover-effect: #ffb703; /* Naranja de hover */
+}
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
     font-family: 'Quicksand', sans-serif;
-}
-body{
-    background: rgb(73, 70, 58);
+    color: var(--text-dark); /* Color de texto por defecto */
 }
 
-/* MAQUETACION */
+body {
+    background-color: var(--background-light);
+    line-height: 1.6;
+    overflow-x: hidden; /* Previene scroll horizontal */
+}
 
-    .logo{
-        height: auto;
-        background: black;
-        width: 100%;
-        color: #ffa600;
-        padding: 25px 0px;
-        font-size: 25px;
-    }
-    .logo h1{
-        text-align: center;
-    }
-
-    .nav-slash{
-        height: 35px;
-        background: black;
-        width: 100%;
-        border-bottom: #919191 solid 1px;
-        border-top: 0.7px solid #ffa60034;
-        text-align: center;
-        padding: 15px 0px 10px 0px ;
-    }
-    /* BOTON CONTACTO */
-    .email-contac{  
-        text-decoration: none;
-        color: #ffa600;
-        font-size: 25px;
-        padding: 5px 20px;
-        
-    }
-        .email-contac:hover{
-            border: 1px solid #ffa600c5;
-            background: #4b2d2da6;
-            border-radius: 5px;
-        }
-
-/* COMIENZA LAS CARDS  */
-.card {
-    color: #ffa600;
+/* --- Header --- */
+.main-header {
+    background-color: var(--secondary-color);
+    padding: 20px 40px;
     display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    margin-left: 50px;
-    
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
-    .cards{
-        height: auto;
-        width: 30%;
-        background: black;
-        margin: 10px 20px;
-        border-radius: 10px;
-        color: #ffa600;
-    }
-            .card-content h2{
-                position: relative;
-                top: -150px;
-                background: rgba(0, 0, 0, 0.479);
-                padding: 10px 10px;
-                color: #ffa600;
-            }
-            .card-content p{
-                position: relative;
-                top: -40px;
-                color: #ffa600;
-            }
-        .img-modify{
-            height: 270px;
-            width: 100%;
-            border-radius: 10px 10px 0 0;
-        }
-      
-/* FINAL DE CARDS */
 
-       /* MAS INFO */
-.info{
-    background: black;
-    margin: 0px 100px;
-    margin-top: 20px;
-    padding: 20px 5px;
+.logo-container h1 {
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1; /* Permite que el título ocupe espacio si la navegación se envuelve */
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-nav .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav .nav-link {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 1.1em;
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav .nav-link:hover,
+.main-nav .nav-link.contact-mail:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.main-nav .contact-mail {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Botón de menú hamburguesa (oculto por defecto en desktop) */
+.menu-toggle {
+    display: none; /* Oculto en desktop */
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.menu-toggle i {
+    color: var(--primary-color);
+}
+
+/* --- Secciones Generales --- */
+section {
+    padding: 60px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* --- Sección de Servicios (Cards) --- */
+.services-section {
+    background-color: var(--background-light);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsivo con minmax */
+    gap: 30px;
+    justify-content: center;
+}
+
+.card-item {
+    background-color: #fff;
     border-radius: 10px;
-} 
-   
-    .info h2{
-        text-align: center;
-        margin-bottom: 10px;
-        color: #ffa600;
-    }
-    .info p{
-        text-align: center;
-        color: #ffa600;
-    }
-    /* FIN MAS INFO */
-  
-
-    /* CONTACTO FINAL Y MAS DATOS */
-    
-    .ct-final{
-        
-        background: black;
-        color: #ffa600;
-        margin: 10px 10px;
-        border-radius: 10px;
-        text-align: center;
-        height: auto;
-    }
-    .ct-modi{
-        display: flex;
-        flex-flow: row wrap;
-        margin: auto;
-        text-align: center;
-    }
-        .ct-final a{
-            text-decoration: none;
-            color: #ffa600;
-            margin: auto;
-        }
-        .ct-final a:hover{
-            color: #ffc65b;
-            
-        }
-
-    .btn-wsp{
-        margin: auto;
-        font-size: 20px;
-        border-radius: 5px;
-        border: none;
-        color: #25D366;
-        cursor: pointer;
-        padding: 10px;
-        font-weight: 900;
-    }
-     .btn-wsp:hover{
-        background: rgb(230, 230, 230);
-     }
-        .btn-wsp:active{
-        background: rgb(134, 134, 134);
-        }
-    .hr{
-        margin: auto;
-        list-style: none;
-        text-align: left;
-    }
-        .hr h3{
-            margin: 10px auto;
-            text-align: center;
-            font-size: 20px;
-        }
-        .hr li{
-            margin: 2.5px auto;
-        }
-    /* FIN CONTACT */
-            
-footer{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    height: 25px;
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura si el contenido lo permite */
+}
+
+.card-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    /* Ajuste para el padding, la imagen ya tiene su propio estilo */
+    padding-bottom: 10px;
+    text-align: center;
+    flex-grow: 1; /* Permite que el contenido crezca y empuje el texto al final si es necesario */
+}
+
+.card-img {
     width: 100%;
-    background: rgba(0, 0, 0, 0.877);
-    color: white;
-    text-align: center;
-    border-top: #b17301 1px solid;
-}
-.footer-center{
-    display: flex;
-    text-align: center;
-    margin: 0px auto;
-}
-    footer p{
-        padding-left: 50px;
-    }
-footer a{
-    text-decoration: none;
-    color: white;
-}
-
-footer a:hover{
-    color: rgb(255, 174, 0);
-}
-
-
-
- /* RESOLUCION CARD MEDIA 1080 */
-
- @media screen and (max-width: 1254px){
-    .card{
-        margin: auto;
-        width: 100%;
-        height: auto;
-    }
-    .cards{
-        margin: 10px auto;
-        width: 30%;
-        height: auto;
-    }
-
- }
-
- @media screen and (max-width: 899px){
- 
-    .ubicacion{
-        
-            margin-top: 25px;
-        
-    }
-}
-
-
-/* RESOLUCION CARD MEDIA 679px */
-@media screen and (max-width:679px){
+    height: 200px; /* Altura fija para las imágenes de las tarjetas */
+    border-radius: 10px 10px 0 0;
     
-    .cards{
-        margin: 10px auto;
-        width: 85%;
-        height: auto;
+}
+
+.card-content h3 {
+    color: var(--secondary-color);
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.card-content p {
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* --- Sección "Más de lo que hacemos" --- */
+.about-section {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    text-align: center;
+}
+
+.about-section .section-title {
+    color: var(--text-light);
+}
+
+.about-text {
+    font-size: 1.1em;
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* --- Sección de Contacto Final --- */
+.contact-section {
+    background-color: var(--background-light);
+}
+
+.contact-info-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.contact-details,
+.location-map {
+    flex: 1; /* Permite que los elementos crezcan y ocupen el espacio disponible */
+    min-width: 300px; /* Ancho mínimo para que no se compriman demasiado */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center;
+}
+
+.contact-details .section-title,
+.location-map .section-title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.contact-details .section-title::after,
+.location-map .section-title::after {
+    content: none; /* Quitamos la línea de abajo para estos títulos pequeños */
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--primary-color);
+}
+
+.contact-link i {
+    font-size: 1.2em;
+    color: var(--primary-color);
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+    color: white !important; /* !important para asegurar la prevalencia */
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #1DA851;
+    color: white; /* Asegurar que el texto se mantenga blanco al hacer hover */
+}
+
+.whatsapp-button i {
+    color: white; /* Asegurar que el icono se mantenga blanco */
+}
+
+.hours-info {
+    margin-top: 25px;
+    width: 100%;
+}
+
+.hours-info h3 {
+    color: var(--secondary-color);
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hours-info h3 i {
+    color: var(--primary-color);
+}
+
+.hours-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hours-info ul li {
+    color: #555;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.location-map iframe {
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.address {
+    color: #555;
+    font-size: 1.05em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.address i {
+    color: var(--primary-color);
+    font-size: 1.1em;
+}
+
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2px;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+.main-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.main-footer a:hover {
+    color: var(--hover-effect);
+}
+/* Animación de entrada para secciones */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform; /* Mejora el rendimiento de la animación */
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsive Design --- */
+
+/* Tablet & Smaller Desktops */
+@media (max-width: 1024px) {
+    .main-header {
+        padding: 15px 20px;
+    }
+
+    .logo-container h1 {
+        font-size: 1.8em;
+    }
+
+    .main-nav .nav-menu {
+        gap: 15px;
+    }
+
+    .main-nav .nav-link {
+        font-size: 1em;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .card-img {
+        /* height: 180px; */
+    }
+
+    .section-title {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .about-text,
+    .contact-link,
+    .address,
+    .hours-info ul li {
+        font-size: 0.9em;
+    }
+
+    .contact-info-wrapper {
+        flex-direction: column; /* Apila los elementos en columnas */
+        align-items: center;
+    }
+
+    .contact-details,
+    .location-map {
+        width: 100%;
+        max-width: 500px; /* Limita el ancho en tabletas */
     }
 }
 
-    @media screen and (max-width:600px){
-        
-        footer{
-            height: auto;
-        }
-        .info{
-            width: 80%;
-            margin: 10px auto;
-        }
+/* Mobile */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column; /* Apila logo y nav */
+        align-items: flex-start;
+        padding: 15px 20px;
     }
 
-@media screen and (max-width: 310px){
-    .footer-center{
-        display: flex;
+    .main-nav {
+        width: 100%;
+        flex-direction: column; /* Apila enlaces de navegación */
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;
+        position: relative; /* Para posicionar el toggle */
+    }
+
+    .logo-container {
+        width: 100%;
+        text-align: center; /* Centra el título en mobile */
+        margin-bottom: 15px;
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el botón de hamburguesa */
+        position: absolute;
+        top: 0px; /* Ajusta la posición si es necesario */
+        right: 0px;
+    }
+
+    .main-nav .nav-menu {
         flex-direction: column;
+        width: 100%;
+        max-height: 0; /* Oculto por defecto */
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background-color: var(--secondary-color);
+        border-top: 1px solid var(--border-color);
+        padding-top: 0;
+    }
+
+    .main-nav .nav-menu.active {
+        max-height: 300px; /* Altura para mostrar el menú (ajusta según contenido) */
+        padding-top: 10px;
+    }
+
+    .main-nav .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav .nav-menu .nav-link {
+        display: block; /* Para que los enlaces ocupen todo el ancho */
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .main-nav .nav-menu li:last-child .nav-link {
+        border-bottom: none;
+    }
+
+    .main-nav .contact-mail {
+        margin-top: 15px;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+    }
+
+    .card-img {
+        height: 150px;
+    }
+
+    .about-text {
+        font-size: 0.9em;
+    }
+
+    .contact-details,
+    .location-map {
+        padding: 20px;
+        min-width: unset;
+        width: 95%; /* Ocupa casi todo el ancho disponible */
+    }
+
+    .whatsapp-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .main-footer {
+        padding: 15px 10px;
+        font-size: 0.8em;
     }
 }
-/* FINALIZA RESPONSIVE 368px */ 
 
+/* Extra Small Mobile (adjust if needed for very small screens) */
+@media (max-width: 480px) {
+    .main-header {
+        padding: 10px;
+    }
+    .logo-container h1 {
+        font-size: 1.5em;
+    }
+    .menu-toggle {
+        font-size: 1.5em;
+        top: 5px;
+        right: 5px;
+    }
+    .section-title {
+        font-size: 1.6em;
+    }
+    .card-content h3 {
+        font-size: 1.4em;
+    }
+    .contact-link,
+    .address,
+    .hours-info ul li {
+        font-size: 0.85em;
+    }
+
+}

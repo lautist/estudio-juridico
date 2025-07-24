@@ -7,84 +7,101 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Pagina Abogacia/img/">
-    <title>Estudio Doc. Iris Navarro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <title>Estudio Jurídico Iris Patricia Navarro</title>
 </head>
 <body>
-    <div class="logo">
-        <h1>Estudio Juridico Iris Patricia Navarro</h1>
-    </div>
-    
-    <div class="nav-slash">
-        <a href="mailto:irispat@hotmail.com" class="email-contac">Contacto</a>
-    </div>
-    
-        <!-- informacion en general -->
-    <div class="card">
-        <div class="cards a1">
-            
-            <div class="card-content">
-                
-                <img src="img/SUCESIONES.jpg" alt="#" class="img-modify">
-                <h2>TEXTO</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sapiente molestias perspiciatis praesentium sequi dolorem.</p>
+    <header class="main-header">
+        <div class="logo-container">
+            <h1>Estudio Jurídico Iris Patricia Navarro</h1>
+        </div>
+        <nav class="main-nav">
+            <a href="mailto:irispat@hotmail.com" class="nav-link contact-mail">Contacto</a>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#info-adicional" class="nav-link">Más sobre nosotros</a></li>
+                <li><a href="#contacto-final" class="nav-link">Contacto y Ubicación</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="servicios" class="services-section">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="cards-grid">
+                <div class="card-item">
+                    <div class="card-content">
+                        <img src="img/SUCESIONES.jpg" alt="Servicio de Sucesiones" class="card-img">
+                        <h3>SUCESIONES</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sapiente molestias perspiciatis praesentium sequi dolorem.</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-content">
+                        <img src="img/abogado_2_recortada-min.jpg" alt="Servicio Legal" class="card-img">
+                        <h3>DERECHO LABORAL</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sapiente molestias perspiciatis praesentium sequi dolorem.</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-content">
+                        <img src="img/SUCESIONES.jpg" alt="Otro Servicio Legal" class="card-img">
+                        <h3>MEDIACIÓN</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sapiente molestias perspiciatis praesentium sequi dolorem.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="cards a2">
-            <div class="card-content">
-                <img src="img/abogado_2_recortada-min.jpg" alt="#" class="img-modify imgm2">
-                <h2>TEXTO</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sapiente molestias perspiciatis praesentium sequi dolorem.</p>
+        </section>
+
+        <section id="info-adicional" class="about-section">
+            <h2 class="section-title">Más de lo que hacemos</h2>
+            <p class="about-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla facere eos quisquam dignissimos ipsum. Earum, est? Pariatur soluta non adipisci nihil, enim, doloremque explicabo libero excepturi esse rerum consectetur, at cumque culpa minima laboriosam? Maxime corporis labore exercitationem est. Temporibus sunt, quo ab iste enim deleniti ea id magnam et.</p>
+        </section>
+
+        <section id="contacto-final" class="contact-section">
+            <div class="contact-info-wrapper">
+                <div class="contact-details">
+                    <h2 class="section-title">Contáctanos</h2>
+                    <a href="tel:+543585077287" class="contact-link phone-link"><i class="fas fa-phone-alt"></i> +54 358 5077287</a>
+                    <a href="https://wa.me/543585077287" target="_blank" rel="noopener noreferrer" class="contact-link whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Whatsapp
+                    </a>
+
+                    <div class="hours-info">
+                        <h3><i class="fas fa-business-time"></i> Horarios de Atención</h3>
+                        <ul>
+                            <li>Lunes a Jueves: 9hs - 12hs | 17hs - 19hs</li>
+                            <li>Viernes: 10hs - 12hs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="location-map">
+                    <h3 class="section-title">Nuestra Ubicación</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.745423854199!2d-64.35928872328108!3d-33.12345678680386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d2c208945a05ef%3A0xc3f8c872d8e4f16b!2sSaint%20Remy%201538%2C%20R%C3%ADo%20Cuarto%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1701234567890!5m2!1ses!2sar"
+                        width="100%"
+                        height="300"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <p class="address"><i class="fas fa-map-marker-alt"></i> Saint Remy 1538, Río Cuarto, Córdoba</p>
+                </div>
             </div>
-        </div>
-        <div class="cards a3">
-            <div class="card-content">
-                <img src="img/SUCESIONES.jpg" alt="#" class="img-modify">
-                <h2>TEXTO</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sapiente molestias perspiciatis praesentium sequi dolorem.</p>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <article>
-        <div class="info">
-            <h2>Mas de lo que hacemos</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla facere eos quisquam dignissimos ipsum. Earum, est? Pariatur soluta non adipisci nihil, enim, doloremque explicabo libero excepturi esse rerum consectetur, at cumque culpa minima laboriosam? Maxime corporis labore exercitationem est. Temporibus sunt, quo ab iste enim deleniti ea id magnam et.</p>
-        </div>
-    </article>
-
-
-    <div class="ct-final">
-        <div class="ct-modi">
-            <a href="#">Numero de telefono +543585077287</a>
-            <a href="#"><button class="btn-wsp"><i class="fa-brands fa-whatsapp"></i> Whatsapp</button></a>
-
-        <div class="hr">
-            <h3><i class="fa-solid fa-business-time"></i>Horarios</h3>
-            <li class="horarios">Lunes a Jueves: 9hs - 12hs  17hs - 19hs</li>
-            <li class="horarios">Viernes: 10hs - 12hs</li>
-        </div>
-    </div>
-    </div>
-
-   <!-- 
-  
-        <div class="card-location ubicacion">
-            
-            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.2917574960074!2d-64.3715850250876!3d-33.12769888105469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d200390dfbe0fb%3A0x284c49d0ffdcb620!2sSaint%20Remy%201538%2C%20X5800%20R%C3%ADo%20Cuarto%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1681826921632!5m2!1ses!2sar" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
-            <p class="dire-location"><i class="fa-solid fa-map-location"></i>Río Cuarto, Saint Remy 1538</p>
-        </div>
-    </div> -->
-    <!-- footer -->
-    <footer>
-        <div class="footer-center">
-        <p>Copyright© 2023</p>
-        <a href=""><p>Programado por lautist</p></a>
-    </div>
+    <footer class="main-footer">
+        <p>Copyright© 2025</p>
+        <a href="https://github.com/lautist" target="_blank" rel="noopener noreferrer">Programado por Lautist</a>
     </footer>
-    <!-- js no funcionando -->
-    <script src="app.js"></script>
+
     <script src="https://kit.fontawesome.com/263969b409.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 </html>
